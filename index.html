@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/png" href="./Assets/mr-logo-icon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz</title>
 
-    <link rel="stylesheet" href="./CSS/style.css" />
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taskinator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
+
   <body>
-      <header>
+      <header clas = "header-flex">
         <div class = "score">
             <a href = "score.html">View Highscores</a>
         </div>
+        <div class = "timer"> Time: <span id = "time">0</span></div>
       </header>
+
       <main>
-        
+        <div class = "" id = "start-screen">
+          <h1>Welcome to the code quiz</h1>
+          <p>Try to answer the following code-related questions within the time limit. Keep in mind that wrong answer will penalized by subtracting 10 second from your timer or score</p>
+          <button class = "" id = "start-quiz">Start Quiz</button>
+        </div>
+
+        <div class = "not-yet" id = "question">
+          <h2>Question section</h2>
+          <ol class = "" id = "answer-choices">
+            <li>
+              <button class = "submit" id = "">a</button>
+            </li>
+          </ol>
+        </div>
+
+        <div class = "not-yet" id = "score-screen">
+          <h2>All Done</h2>
+          <p>Your final score is: <span id = "final-score"></span></p>
+          <form>
+            <label for = "name"> Enter your name:</label>
+            <input type = "text" placeholder="Your Name" name = "name" id = "name">
+            <button id = "submit">Submit</button>
+          </form>
+
+        </div>
       </main>
+    <script src = "./assets/js/script.js"></script>  
   </body>
+</html>
