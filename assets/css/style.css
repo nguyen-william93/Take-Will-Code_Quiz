@@ -1,3 +1,17 @@
-.not-yet {
+.hide {
     display: none;
 }
+
+.display-style-list {
+    list-style-type: none;
+}
+
+.answer-choice {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.feed-back{
+    font-size: 30px;
+};

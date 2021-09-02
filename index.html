@@ -18,22 +18,19 @@
       </header>
 
       <main>
-        <div class = "" id = "start-screen">
+        <section id = "start-screen">
           <h1>Welcome to the code quiz</h1>
           <p>Try to answer the following code-related questions within the time limit. Keep in mind that wrong answer will penalized by subtracting 10 second from your timer or score</p>
           <button class = "" id = "start-quiz">Start Quiz</button>
-        </div>
+        </section>
 
-        <div class = "not-yet" id = "question">
+        <section class = "hide" id = "question-screen">
           <h2>Question section</h2>
-          <ol class = "" id = "answer-choices">
-            <li>
-              <button class = "submit" id = "">a</button>
-            </li>
-          </ol>
-        </div>
+          <ul class = "display-style-list" id = "answer-list">
+          </ul>
+        </section>
 
-        <div class = "not-yet" id = "score-screen">
+        <section class = "hide" id = "score-screen">
           <h2>All Done</h2>
           <p>Your final score is: <span id = "final-score"></span></p>
           <form>
@@ -41,8 +38,9 @@
             <input type = "text" placeholder="Your Name" name = "name" id = "name">
             <button id = "submit">Submit</button>
           </form>
+        </section>
 
-        </div>
+        <section class = "feed-back hide" id = "feed-back"></section>
       </main>
     <script src = "./assets/js/script.js"></script>  
   </body>
