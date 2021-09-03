@@ -1,3 +1,4 @@
+var clearHighscore = document.querySelector("#clear");
 var printScore = function(){
     var score = JSON.parse(localStorage.getItem("highscore")) || [];
 
@@ -9,5 +10,14 @@ var printScore = function(){
        olEl.appendChild(liEl);
     }
 }
+
+var clearScore = function(){
+    window.localStorage.removeItem("highscore");
+    window.location.reload();
+};
+
+clearHighscore.addEventListener("click", clearScore)
+
+
 
 printScore();
