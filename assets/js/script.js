@@ -122,6 +122,7 @@ var saveScore = function(){
         window.location.href = "score.html";
     }
 }
+
 submitEl.addEventListener("click", saveScore);
 startButoon.addEventListener("click", startQuiz);
 
