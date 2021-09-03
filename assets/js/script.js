@@ -21,7 +21,7 @@ var questionBankObj = [
     }  
 ];
 
-
+//quiz ended, stop the timer, dispalying the result page for user and prompt to enter username
 var quizEnd = function(){
     clearInterval(timerFunction);
 
@@ -35,6 +35,8 @@ var quizEnd = function(){
 
 }
 
+//check the user answer and apply the correct consequences
+//after checking the user answer, if there are still question left then display it, if not endquiz
 var checkAnswer = function(){
     if (this.value !== questionBankObj[index].correctAnswer){
         timeLeft -= 10;
@@ -62,6 +64,7 @@ var checkAnswer = function(){
     }
 };
 
+//generating the question and multiple choice pave
 var getQuestion=  function(){
     var currentQuestion = questionBankObj[index];
 
@@ -87,26 +90,28 @@ var getQuestion=  function(){
     };
 };
 
-
+//start/run the quiz when start button is clicked
+//also timerfunction is also in here to start the timer. if time left is = 0 then automatically end the quiz
+//also displaying the time left after every second
 var startQuiz = function(){
     var startScreen = document.querySelector("#start-screen");
     startScreen.setAttribute("class", "hide");
     
     questionScreen.setAttribute("class", "");
-    getQuestion();
+
     time.textContent = timeLeft;
     timerFunction = setInterval(function(){
         timeLeft -= 1;
         time.textContent = timeLeft;
-        if (timeLeft <= 0){
+        if (timeLeft === 0){
             timeLeft = 0;
             quizEnd();
-            saveScore();
         }
     }, 1000);
-
+    getQuestion();
 };
 
+//save the user score to local storage and direct the user to the score.html page.
 var saveScore = function(){
     var userName = document.querySelector("#name").value.trim();
     if (userName !== ""){

@@ -1,6 +1,6 @@
 var clearHighscore = document.querySelector("#clear");
 
-
+//get the local storage, sort the score, then display it
 var printScore = function(){
     var score = JSON.parse(localStorage.getItem("highscore")) || [];
 
@@ -13,6 +13,7 @@ var printScore = function(){
     }
 }
 
+//if clear score button is click then clear the local storage
 var clearScore = function(){
     window.localStorage.removeItem("highscore");
     window.location.reload();
