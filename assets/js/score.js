@@ -1,4 +1,6 @@
 var clearHighscore = document.querySelector("#clear");
+
+
 var printScore = function(){
     var score = JSON.parse(localStorage.getItem("highscore")) || [];
 
