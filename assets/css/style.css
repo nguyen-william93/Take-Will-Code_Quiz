@@ -1,17 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: white;
+}
+/*header styling*/
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: violet;
+    height: 80px;
+    font: 50px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.time{
+    color: black;
+}
+h1{
+    margin-bottom: 10px;
+}
+.main-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+
+}
+
+.title{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.btn{
+    margin-top: 5px ;
+    padding: 10px;
+    background-color: darkblue;
+    border-radius: 12px;
+    border: 0;
+    font-size: 15px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.btn:hover{
+    background-color: violet;
+}
+
 .hide {
     display: none;
 }
 
-.display-style-list {
-    list-style-type: none;
+.btn-answer{
+    text-align: left;
+    width: 30%;
 }
 
-.answer-choice {
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 25px;
+.display-list{
+    margin-left: 30%;
+    margin-right:30%;
+    list-style-type: none;
+    justify-content: flex-start;
+}
+
+.question-display{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-right: 25%;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.score-display{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px;
+    margin-left: 30%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.input{
+    height: 30px;
+    font-size: 15px;
 }
 
 .feed-back{
-    font-size: 30px;
-};
+    color: gray;
+    border-top: solid 2px;
+    margin-left: 30%;
+    margin-right: 20%;
+    font-size: 35px;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.display-highscore{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-right: 15%;
+    margin-top: 15%;
+    align-items: flex-start;
+}
+
+.score-list{
+    list-style-type: none;
+    margin-right: 10%;
+}
+
+.score-list li:nth-child(odd){
+    background-color: darkgray;
+    width: 100%;
+}

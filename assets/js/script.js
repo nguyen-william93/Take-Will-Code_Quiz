@@ -7,11 +7,11 @@ var feedBack = document.querySelector("#feed-back");
 var submitEl = document.querySelector("#submit");
 var timeLeft = 20;
 var index = 0;
-var timerFunction;
+var timerFunction; //timer function to start and stop timer. 
 var questionBankObj = [
     {
         question: "hi what is your nane?",
-        choices: ["a", "b", "c", "d"],
+        choices: ["aasdfasdfas", "b", "c", "d"],
         correctAnswer: "a"
     },
     {
@@ -27,6 +27,7 @@ var quizEnd = function(){
 
     var scoreScreen = document.querySelector("#score-screen");
     scoreScreen.removeAttribute("class");
+    scoreScreen.setAttribute("class", "score-display")
 
     var finalScore = document.querySelector("#final-score");
     finalScore.textContent = timeLeft;
@@ -45,16 +46,16 @@ var checkAnswer = function(){
         }
         time.textContent = timeLeft;
         feedBack.textContent = "Wrong!";
-        feedBack.setAttribute("class", "feed-back-wrong");
+        feedBack.setAttribute("class", "feed-back");
     } else {
         feedBack.textContent = "Correct!";
-        feedBack.setAttribute("class", "feed-back-correct");
+        feedBack.setAttribute("class", "feed-back");
     };
 
     feedBack.setAttribute("class", "feed-back");
     setTimeout(function(){
         feedBack.setAttribute("class", "feed-back hide");
-    }, 1000);
+    }, 500);
 
     index += 1;
     if(index === questionBankObj.length){
@@ -75,8 +76,8 @@ var getQuestion=  function(){
 
     for (var i = 0; i < 4; i ++){
         var choiceNode = document.createElement("li");
-        var buttonEl = document.createElement("button")
-        buttonEl.setAttribute("class", "choice");
+        var buttonEl = document.createElement("button");
+        buttonEl.setAttribute("class", "btn btn-answer");
         buttonEl.setAttribute("value", currentQuestion.choices[i]);
 
         buttonEl.textContent = i + 1 + ". " + currentQuestion.choices[i];

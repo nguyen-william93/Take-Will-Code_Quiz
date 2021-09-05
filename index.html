@@ -14,19 +14,19 @@
         <div class = "score">
             <a href = "score.html">View Highscores</a>
         </div>
-        <div class = "timer"> Time: <span id = "time">0</span></div>
+        <div class = "time"> Time: <span id = "time">0</span></div>
       </header>
 
       <main>
-        <section id = "start-screen">
-          <h1>Welcome to the code quiz</h1>
+        <section class = "main-display" id = "start-screen">
+          <h1 class = "title">Welcome to the code quiz</h1>
           <p>Try to answer the following code-related questions within the time limit. Keep in mind that wrong answer will penalized by subtracting 10 second from your timer or score</p>
-          <button class = "" id = "start-quiz">Start Quiz</button>
+          <button class = "btn" id = "start-quiz">Start Quiz</button>
         </section>
 
         <section class = "hide" id = "question-screen">
-          <h2></h2>
-          <ul class = "display-style-list" id = "answer-list">
+          <h2 class = "question-display"></h2>
+          <ul class = "display-list" id = "answer-list">
           </ul>
         </section>
 
@@ -35,8 +35,8 @@
           <p>Your final score is: <span id = "final-score"></span></p>
           <p>
              Enter your name:
-            <input type = "text" placeholder="Your Name" name = "name" id = "name">
-            <button id = "submit">Submit</button>
+            <input type = "text" placeholder="Your Name" name = "name" id = "name" class = "input">
+            <button class = "btn" id = "submit">Submit</button>
           </p>
         </section>
 
