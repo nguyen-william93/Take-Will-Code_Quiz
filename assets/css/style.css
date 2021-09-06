@@ -70,11 +70,11 @@ h1{
 
 .btn-answer{
     text-align: left;
-    width: 100%;
+    width: 20%;
 }
 
 .display-list{
-    margin-left: 20%;
+    margin-left: 25%;
     margin-right:20%;
     list-style-type: none;
     justify-content: flex-start;
@@ -88,7 +88,7 @@ h1{
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-right: 20%;
     padding-bottom: 20px;
     margin-top: 40px;
@@ -115,7 +115,7 @@ h1{
 .feed-back{
     color: gray;
     border-top: solid 2px;
-    margin-left: 30%;
+    margin-left: 25%;
     margin-right: 20%;
     font-size: 35px;
     margin-top: 15px;
