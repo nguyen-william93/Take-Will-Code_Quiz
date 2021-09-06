@@ -114,7 +114,7 @@ var startQuiz = function(){
     var startScreen = document.querySelector("#start-screen");
     startScreen.setAttribute("class", "hide");
     
-    questionScreen.setAttribute("class", "question-display");
+    questionScreen.setAttribute("class", "");
 
     time.textContent = timeLeft;
     timerFunction = setInterval(function(){
