@@ -10,7 +10,7 @@ var printScore = function(){
     for(var i = 0; i < score.length; i++){
        var liEl = document.createElement("li");
 
-       liEl.textContent = score[i].name + "--" + score[i].score;
+       liEl.textContent = i + 1 + ". " + score[i].name + "--" + score[i].score;
 
        olEl.appendChild(liEl);
     }

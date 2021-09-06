@@ -5,21 +5,37 @@ var multipleChoice = document.querySelector("#answer-list");
 var time = document.querySelector("#time");
 var feedBack = document.querySelector("#feed-back");
 var submitEl = document.querySelector("#submit");
-var timeLeft = 20;
 var index = 0;
 var timerFunction; //timer function to start and stop timer. 
 var questionBankObj = [
     {
-        question: "hi what is your nane?",
-        choices: ["aasdfasdfas", "b", "c", "d"],
-        correctAnswer: "a"
+        question: "Commonly used data type DO NOT include:",
+        choices: ["string", "booleans", "alerts", "numbers"],
+        correctAnswer: "alerts",
     },
     {
-        question: "How are you doing?",
-        choices: ["a","b","c","d"],
-        correctAnswer: "c"
-    }  
+        question: "The condition in an if/else statement is enclosed with ___________.",
+        choices: ["quotes","curly bracket" ,"paranthesis","square brackets"],
+        correctAnswer: "paranthesis",
+    },
+    {
+        question: "Arrays in Javascript can be used to store _______.",
+        choices: ["numbers and string", "other arrays", "booleans", "all of the above"],
+        correctAnswer: "all of the above",
+    },
+    {
+        question: "String values must be enclosed within _____ when being assigned to variables.",
+        choices: ["commas", "curley bracket", "quotes", "paranthesis"],
+        correctAnswer: "quotes",
+    },
+    {
+        question: "A very useful tool used during developement and debugging for printing content to the debugger is:",
+        choices: ["Javascript", "terminal/bash", "for loops", "console.log"],
+        correctAnswer: "console.log",
+    } 
 ];
+
+var timeLeft = questionBankObj.length * 20 //allowing on average 20second per question
 
 //quiz ended, stop the timer, dispalying the result page for user and prompt to enter username
 var quizEnd = function(){
@@ -98,7 +114,7 @@ var startQuiz = function(){
     var startScreen = document.querySelector("#start-screen");
     startScreen.setAttribute("class", "hide");
     
-    questionScreen.setAttribute("class", "");
+    questionScreen.setAttribute("class", "question-display");
 
     time.textContent = timeLeft;
     timerFunction = setInterval(function(){
