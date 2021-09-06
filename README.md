@@ -8,4 +8,4 @@ Ideal for future improvement, I can created an UI where I can let the user enter
 
 deployment link: https://nguyen-william93.github.io/Take-Will-Code_Quiz/
 
-image: <img src = "/assets/images/main-page.pgn"> | <img src = "/assets/images/score-page.png">
+image: ![](/assets/images/main-page.png)
