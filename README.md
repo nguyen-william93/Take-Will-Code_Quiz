@@ -5,3 +5,8 @@ I used html to setup the back bone for the webpage and the static page. Javascri
 The score is save to a local storage, then it will get display on the score.html page in a descending order. 
 Since we are using flex box, I don't have to worry about the screen size. It will just flex depending on the size.
 Ideal for future improvement, I can created an UI where I can let the user enter his/her own question and answer choices. I can also dynamically set the width of the multiple choices so that it will be set to the longest string.
+
+deployment link: https://nguyen-william93.github.io/Take-Will-Code_Quiz/
+
+images: ![](imaages/main-page.png)
+        ![](images/score-page.png)
